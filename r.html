@@ -1,0 +1,31 @@
+<!doctype>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>r language edu</title>
+			<style>
+				#main {
+					font-size:30px;border:10px solid skyblue;
+			    }
+			</style>
+			<script type="text/javascript">
+			function rfiledown(form)  {
+				var input = document.forms.write.code.value;
+				document.getElementById("write_here").innerHTML = input;
+				return false;
+			}
+		    </script>
+		</head>
+		<body>
+			<h1 id="main">r language editor</h1>
+			<h1 id="main"><a href="rlib.html" >lib</a></h1>
+			<input type="text" name="filename">
+			<form name="write" action="http://localhost/rfileupload.php" method="post" enctype="multipart/form-data" >
+			    <input type="button"  value="save file" onsubmit="return rfiledown(this)">
+				<input type="file" name="rfile">
+				<input type="submit">
+				<div id="write_here"></div>
+				<textarea name="code" wrap="hard/soft" cols="60px" rows="50"></textarea>
+            </form>
+		</body>
+	</html>
